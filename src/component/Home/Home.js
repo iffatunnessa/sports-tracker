@@ -16,7 +16,7 @@ const Home = () => {
     return (
         <React.Fragment>
             <div className='banner'>
-                <p>Sports League Tracker</p>
+                <p>Sports Tracker</p>
             </div>
             <Container maxWidth="md">
                 <Grid container spacing={0}>
