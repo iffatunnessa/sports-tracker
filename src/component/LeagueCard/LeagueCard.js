@@ -11,12 +11,11 @@ import Grid from '@material-ui/core/Grid';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import {Link} from "react-router-dom";
-import Icon from '@material-ui/core/Icon';
 
 const useStyles = makeStyles({
     root: {
-        maxWidth: 400,
-        maxHeight: 400,
+        width: 290,
+        height: 340,
         margin: '20px',
         textAlign:'center'
     },
@@ -33,18 +32,22 @@ const useStyles = makeStyles({
     },
     btnText:{
         textTransform: 'capitalize',
+        color:'white'
     },
     icon:{
         marginLeft: '10px',
     },
+    btn:{
+        background: 'linear-gradient(90deg, #ebb523 30%, #fcb900 90%)',
+    }
 });
 
 const LeagueCard = (props) => {
     const classes = useStyles();
     const { strLeague, strSport, strBadge ,idLeague} = props.league;
-    // console.log(teamHandler);
+    
     return (
-        <Grid item xs={4}>
+        <Grid item xs={12} sm={4}>
             <Card className={classes.root}>
                 <CardActionArea>
                     <CardMedia className={classes.img}
@@ -62,7 +65,7 @@ const LeagueCard = (props) => {
                     </CardContent>
                 </CardActionArea>
                 <CardActions className={classes.btnArea}>
-                    <Button component={Link} variant="contained" color="primary" classes={{label: classes.btnText}}  to={`/leagueDetails/${idLeague}`}>Explore  <FontAwesomeIcon className={classes.icon} icon={faArrowRight}/> </Button> 
+                    <Button component={Link} variant="contained" classes={{root: classes.btn, label: classes.btnText}}  to={`/leagueDetails/${idLeague}`}>Explore  <FontAwesomeIcon className={classes.icon} icon={faArrowRight}/> </Button> 
                     
                 </CardActions>
                 

@@ -15,6 +15,7 @@ const Home = () => {
     console.log(leagues); 
     return (
         <React.Fragment>
+            <div className='banner'></div>
             <Container maxWidth="md">
                 <Grid container spacing={0}>
                 {

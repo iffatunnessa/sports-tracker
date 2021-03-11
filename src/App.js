@@ -6,7 +6,7 @@ import {
   Switch,
   Route
 } from "react-router-dom";
-import NoPageFound from './component/nopagefound/NoPageFound';
+import NoPageFound from './component/noPageFound/NoPageFound';
 import LeagueDetails from './component/LeagueDetails/LeagueDetails';
 
 function App() {
